@@ -1,16 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import AuthUser from './components/AuthUser';
-import Guest from './navbar/guest';
-import Auth from './navbar/auth';
+import AuthUser from "./components/AuthUser";
+import Guest from "./path/guest";
+import Auth from "./path/auth";
 
 function App() {
-  const {getToken} = AuthUser();
-  if(!getToken()){
-    return <Guest />
+  const { getToken } = AuthUser();
+  if (!getToken()) {
+    return <Guest />;
   }
-  return (
-      <Auth />
-  );
+  return <Auth />;
 }
 
 export default App;
